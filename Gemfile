@@ -11,7 +11,10 @@ group :development, :test do
   gem 'terminal-notifier-guard'
 end
 
-# gem 'annotate', '2.5.0', group: :development
+group :development do
+  gem 'annotate', '2.5.0'
+  gem 'meta_request'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -28,6 +31,8 @@ group :test do
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
   gem 'factory_girl_rails', '1.4.0'
+  gem 'cucumber-rails', '1.2.1', require: false
+  gem 'database_cleaner', '0.7.0'
 end
 
 group :production do
